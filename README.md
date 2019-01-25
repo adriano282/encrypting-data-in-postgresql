@@ -1,1 +1,1 @@
-# encrypting-data-in-postgres
+# encrypting-data-in-postgresql
