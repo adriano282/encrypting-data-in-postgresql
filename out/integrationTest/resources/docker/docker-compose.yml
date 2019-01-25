@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  database:
+    image: postgres:10.4-alpine
+    hostname: database
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+      POSTGRES_DB: demo
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+        - ./configuration/postgresql:/docker-entrypoint-initdb.d/
