@@ -21,7 +21,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
        
  - docker container for running the application
  
- # How does the encryption work?
+ # How does cryptography work?
 
  ### PGCrypt extension functions
  
@@ -34,7 +34,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  
  The PGCrypt functions are applied to entities' columns which bear sensitive information. In this example, the column is a secret representing a possible access customer.
  
- ### GnuPG to generate keys for encryption
+ ### GnuPG to generate keys for cryptography
   The private and public keys were generated using GnuPG [https://www.gnupg.org/] which is an implementation of the OpenPGP standard.
  
  ### Entity column mapping with Hibernate @ColumnTransformer
