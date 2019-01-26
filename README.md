@@ -10,12 +10,15 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
 ### There is a docker-compose file containing:
 
  - a PostgreSQL database;
- - Adminer[http://localhost:5433] for accessing the PostgreSQL database in brownser.
-    Access info:
-      Server	  - "database"
-      Username	- "demo"
-      Password	- "demo"
-      Database	- "demo"
+ 
+ - Adminer [http://localhost:5433] for accessing the PostgreSQL database in brownser. \
+    
+    Access info: \
+       Server	  - "database" \
+       Username	- "demo"     \
+       Password	- "demo"     \
+       Database	- "demo"     
+       
  - docker container for running the application
  
  # How does the encryption work?
@@ -23,24 +26,25 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  ### PGCrypt extension functions
  
  Once enabled, the PGCrypto extension provide a set of database function.
- The function used for encryptio are:
+ 
+ The used functions are:
   - pgp_pub_encrypt = encrypts data
   - pgp_pub_decrypt = decrypts data
   - dearmor         = parses a generated GPG keys to the fuctions above
  
+ The PGCrypt functions are applied to entities' columns which bear sensitive information. In this example, the column is a secret representing a possible access customer.
+ 
  ### GnuPG to generate keys for encryption
   The private and public keys were generated using GnuPG [https://www.gnupg.org/] which is an implementation of the OpenPGP standard.
  
- The PGCrypt functions are applied to entities' columns which bear sensitive information. In this example, the columan is a secret representing a possible access customer.
- 
- ### Columns Mapping with Hibernate @ColumnTransformer
+ ### Entity column mapping with Hibernate @ColumnTransformer
  
  The columns intended to be encrypted should be annotated with Hibernate's @ColumnTransformer [https://docs.jboss.org/hibernate/orm/4.3/javadocs/org/hibernate/annotations/ColumnTransformer.html] annotation.
  
  
 # Running the integration tests
 
-./gradlew integrationTest
+./gradlew clean integrationTest
 
 # How to Run the application
 
@@ -50,7 +54,7 @@ docker-compose -f docker/docker-compose.yml up
 
 ## Endpoints available
 
-GET /customer/{id}
+GET /customer/{id} \
 POST /customer
 
 # Sample requests
@@ -62,6 +66,6 @@ curl localhost:8080/customer/1
 
 ### Some References
 
-https://github.com/michael-simons/simple-meetup/blob/master/build.gradle
-https://github.com/tomasulo/docker-compose-integration-tests/blob/master/build.gradle
+https://github.com/michael-simons/simple-meetup/blob/master/build.gradle \
+https://github.com/tomasulo/docker-compose-integration-tests/blob/master/build.gradle \
 https://cloud.spring.io/spring-cloud-cli/
