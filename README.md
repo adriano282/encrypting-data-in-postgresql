@@ -57,7 +57,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
 
 docker-compose -f docker/docker-compose.yml up
 
-## Endpoints available
+## Endpoints
 
 GET /customer/{id} \
 POST /customer
