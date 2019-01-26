@@ -43,7 +43,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  
  ### Application properties encryption with Spring Cloud Config
  
- The keys and password used for encrypting data in database were encrypted using Spring Cloud Config.
+ The keys and password used for encrypting data in database written in application.properties file were encrypted using Spring Cloud Config.
  
  The properties are decrypted at runtime by Spring Cloud Config. These properties are marked with {cipher} before the value to signalize the Spring Cloud Config to decrypt they.
  
