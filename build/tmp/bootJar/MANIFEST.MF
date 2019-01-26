@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Start-Class: br.com.adrianodeveloper.encryption.EncryptingDataInPostgr
- esApplicationKt
-Main-Class: org.springframework.boot.loader.JarLauncher
-
