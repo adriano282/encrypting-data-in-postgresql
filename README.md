@@ -42,11 +42,11 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  The columns intended to be encrypted should be annotated with Hibernate's @ColumnTransformer [https://docs.jboss.org/hibernate/orm/4.3/javadocs/org/hibernate/annotations/ColumnTransformer.html] annotation.
  
  
-# Running the integration tests
+## Running the integration tests
 
 ./gradlew clean integrationTest
 
-# How to Run the application
+## How to Run the application
 
 ./gradlew clean build
 
@@ -57,7 +57,7 @@ docker-compose -f docker/docker-compose.yml up
 GET /customer/{id} \
 POST /customer
 
-# Sample requests
+## Sample requests
 
 curl -H "Content-Type: application/json" -X POST localhost:8080/customer -d '{ "name": "Adriano de Jesus", "username": "adriano.jesus2", "password": "my-super-secret-password" }'  
 
