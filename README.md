@@ -41,7 +41,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  
  The columns intended to be encrypted should be annotated with Hibernate's @ColumnTransformer [https://docs.jboss.org/hibernate/orm/4.3/javadocs/org/hibernate/annotations/ColumnTransformer.html] annotation.
  
- ### Application properties encryption with Spring Cloud Config
+ ### Application properties encryption with Spring Cloud Config lib
  
  The keys and password used for encrypting data in database written in application.properties file were encrypted using Spring Cloud Config.
  
