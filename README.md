@@ -3,7 +3,7 @@
 
 This is a customer Rest API (POST and GET) example project to show how to encrypt data in PostgreSQL databases.
 
-The encryption is done through a PostgreSQL extesion called PGCrypto [https://www.postgresql.org/docs/10/pgcrypto.html].
+The encryption is done through a PostgreSQL extension called PGCrypto [https://www.postgresql.org/docs/10/pgcrypto.html].
 
 # How does the application work?
 
