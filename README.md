@@ -10,17 +10,17 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
 ### There is a docker-compose file containing:
 
  - a PostgreSQL database;
- - Adminer to access the PostgreSQL database:
-    Accsss Info:
+ - Adminer[http://localhost:5433] for accessing the PostgreSQL database in brownser.
+    Access info:
       Server	  - "database"
       Username	- "demo"
       Password	- "demo"
       Database	- "demo"
- - Container for the application itself
+ - docker container for running the application
  
  # How does the encryption work?
 
- ### PGCrypt extension used functions
+ ### PGCrypt extension functions
  
  Once enabled, the PGCrypto extension provide a set of database function.
  The function used for encryptio are:
@@ -58,10 +58,6 @@ POST /customer
 curl -H "Content-Type: application/json" -X POST localhost:8080/customer -d '{ "name": "Adriano de Jesus", "username": "adriano.jesus2", "password": "my-super-secret-password" }'  
 
 curl localhost:8080/customer/1
-
-# Accessing the Adminer
-
-http://localhost:5433
 
 
 ### Some References
