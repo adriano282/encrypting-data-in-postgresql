@@ -71,6 +71,6 @@ curl localhost:8080/customer/1
 
 ### Some References
 
-https://github.com/michael-simons/simple-meetup/blob/master/build.gradle \
-https://github.com/tomasulo/docker-compose-integration-tests/blob/master/build.gradle \
+https://github.com/michael-simons/simple-meetup \
+https://github.com/tomasulo/docker-compose-integration-tests \
 https://cloud.spring.io/spring-cloud-cli/
