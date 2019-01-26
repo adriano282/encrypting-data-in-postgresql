@@ -9,9 +9,9 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
 
 ### There is a docker-compose file containing:
 
- - a PostgreSQL database;
+ - a PostgreSQL database
  
- - Adminer [http://localhost:5433] for accessing the PostgreSQL database in brownser.
+ - Adminer [http://localhost:5433] for accessing the PostgreSQL database in brownser
     
     Access info: \
        Server	  - "database" \
