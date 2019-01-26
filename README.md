@@ -5,7 +5,7 @@ This is a customer Rest API (POST and GET) example project to show how to encryp
 
 The encryption is done through a PostgreSQL extension called PGCrypto [https://www.postgresql.org/docs/10/pgcrypto.html].
 
-# How does the application work?
+# How this example is structured?
 
 ### There is a docker-compose file containing:
 
@@ -21,7 +21,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
        
  - docker container for running the application
  
- # How does cryptography work?
+ # How does application deal with cryptography?
 
  ### PGCrypt extension functions
  
