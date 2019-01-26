@@ -11,7 +11,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
 
  - a PostgreSQL database;
  
- - Adminer [http://localhost:5433] for accessing the PostgreSQL database in brownser. \
+ - Adminer [http://localhost:5433] for accessing the PostgreSQL database in brownser.
     
     Access info: \
        Server	  - "database" \
@@ -41,6 +41,11 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  
  The columns intended to be encrypted should be annotated with Hibernate's @ColumnTransformer [https://docs.jboss.org/hibernate/orm/4.3/javadocs/org/hibernate/annotations/ColumnTransformer.html] annotation.
  
+ # Application properties encryption with Spring Cloud Config
+ 
+ The keys and password used for encrypting data in database were encrypted using Spring Cloud Config.
+ 
+ The properties are decrypted at runtime by Spring Cloud Config. These properties are marked with {cipher} before the value to signalize the Spring Cloud Config to decrypt they.
  
 ## Running the integration tests
 
