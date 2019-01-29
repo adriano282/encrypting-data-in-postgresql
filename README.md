@@ -22,7 +22,7 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  - docker container for running the application
  
  # How does application deal with cryptography?
-
+ 
  ### PGCrypt extension functions
  
  Once enabled, the PGCrypto extension provide a set of database function.
@@ -46,6 +46,12 @@ The encryption is done through a PostgreSQL extension called PGCrypto [https://w
  The keys and password used for encrypting data in database written in application.properties file were encrypted using Spring Cloud Config Cli. [https://cloud.spring.io/spring-cloud-cli/]
  
  The properties are decrypted at runtime by Spring Cloud Config lib dependency. These properties were marked with {cipher} before the value to signalize the Spring Cloud Config to decrypt them.
+ 
+ ### Enabling the PGCrypto extension
+ 
+ In this project, the PGCrypto is already enabled for you. But for informative purposes, to enable the PGCrypto in PostgreSQL, you need only to run the following SQL command:
+ 
+ CREATE EXTENSION PGCRYPTO;
  
 ## Running the integration tests
 
